@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import classes from './Hero.module.css';
 
@@ -6,13 +7,13 @@ const Hero = () => {
         <section className={classes.hero}>
             <div className={classes.image}>
                 <Image
-                    src="image/site/adi.JPG"
+                    src="/image/site/adi.JPG"
                     alt="Aditya's pic"
-                    width={300}
-                    height={300}
+                    width={500}
+                    height={500}
                 />
             </div>
-            <h1>Hi, I&aposm Aditya</h1>
+            <h1>Hi, I'm Aditya</h1>
             <p>
                 I blog about web development - especially frontend frameworks
                 like Angular or React.
