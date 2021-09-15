@@ -12,7 +12,7 @@ const PostItem = (props) => {
         year: 'numeric',
     });
 
-    const imgPath = `/image/posts/${slug}/${image}`;
+    const imgPath = `/images/posts/${slug}/${image}`;
     const linkPath = `/posts/${slug}`;
 
     return (
