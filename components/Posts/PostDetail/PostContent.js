@@ -1,7 +1,10 @@
+/* eslint-disable react/no-children-prop */
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 import classes from './PostContent.module.css';
 import PostHeader from './PostHeader';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const PostContent = (props) => {
     const { post } = props;
@@ -37,6 +40,20 @@ const PostContent = (props) => {
                 );
             }
             return <p>{paragraph.children}</p>;
+        },
+
+        code(code) {
+            const { className, children } = code;
+            const language = className.split('-')[1];
+
+            // eslint-disable-next-line react/no-children-prop
+            return (
+                <SyntaxHighlighter
+                    style={atomDark}
+                    language={language}
+                    children={children}
+                />
+            );
         },
     };
 
