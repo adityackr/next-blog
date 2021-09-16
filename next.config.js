@@ -7,7 +7,7 @@ module.exports = (phase) => {
                 mongodb_username: 'adi',
                 mongodb_password: 'twD8AewoVTVADhF7',
                 mongodb_clustername: 'cluster0',
-                mongodb_database: 'acblog-dev',
+                mongodb_database: 'acblog-site-dev',
             },
         };
     }
